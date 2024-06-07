@@ -27,12 +27,13 @@ app.use(cors());
 //   })
 // );
 
+app.get("/", (req, res) => {
+  res.send("Hi");
+});
+
 app.get("/", (request, response) => {
   console.log(request);
   return response.status(234).send("Welcome To MERN Stack Tutorial");
-});
-app.get("/", (req, res) => {
-  res.send("Hi");
 });
 app.use("/books", booksRoute);
 
