@@ -31,7 +31,9 @@ app.get("/", (request, response) => {
   console.log(request);
   return response.status(234).send("Welcome To MERN Stack Tutorial");
 });
-
+app.get("/", (req, res) => {
+  return res.send("Hi");
+});
 app.use("/books", booksRoute);
 
 // app.post("/books", async (req, res) => {
